@@ -2,25 +2,15 @@
 <main>
     <aside>
         <h1>Categories</h1>
-        <nav>
-            <ul class="nav">
+
                 <!-- display links for all categories -->
-                <?php foreach($categories as $category) : ?>
-                <li>
-                    <a href="?category_id=<?php 
-                              echo $category['categoryID']; ?>">
-                        <?php echo $category['categoryName']; ?>
-                    </a>
-                </li>
-                <?php endforeach; ?>
-            </ul>
-        </nav>
+        <?php include '../view/categories_nav.php'; ?>
     </aside>
     <section>
         <h1><?php echo $name; ?></h1>
-        <div id="left_column">
-            <p>
-                <img src="<?php echo $image_filename; ?>"
+	<div id="left_column">
+	    <p>   
+	       <img src="<?php echo $image_filename; ?>"
                     alt="<?php echo $image_alt; ?>" />
             </p>
         </div>
