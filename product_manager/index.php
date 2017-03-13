@@ -65,9 +65,10 @@ if ($action == 'list_products') {
         header('Location: .?action=list_categories');
     }
 } else if ($action == 'delete_category') {
-    $category_id = filter_input(INPUT_POST, 'category_id',
-            FILTER_VALIDATE_INT);
-    header('Location: .?action=list_categories');
-
+        $category_id = filter_input(INPUT_POST, 'category_id',
+	        FILTER_VALIDATE_INT);
+	    delete_category($category_id);
+	    header('Location: .?action=list_categories');
+        
 }    
 ?>
